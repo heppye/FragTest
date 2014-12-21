@@ -9,7 +9,7 @@ generator = cms.EDFilter("Pythia6GeneratorFilter",
     maxEventsToPrint = cms.untracked.int32(0),
     PythiaParameters = cms.PSet(
         pythiaUESettingsBlock,
-        processParameters = cms.vstring('MSEL=1          ! Default',
+        processParameters = cms.vstring('MSEL=2          ! Default',
         'BRAT(656)=0 ! decay forbidden',
         'BRAT(657)=0 ! decay dimuon',
         'BRAT(658)=0 ! decay forbidden',
