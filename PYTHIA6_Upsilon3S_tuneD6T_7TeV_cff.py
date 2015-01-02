@@ -1,12 +1,12 @@
 import FWCore.ParameterSet.Config as cms
 
 configurationMetadata = cms.untracked.PSet(
-        version = cms.untracked.string('$Revision: 1.6 $'),
-        name = cms.untracked.string('$Source: /cvs/CMSSW/CMSSW/Configuration/GenProduction/python/PYTHIA6_Upsilon3S_7TeV_cff.py,v $'),
+        version = cms.untracked.string('$Revision: 1.1 $'),
+        name = cms.untracked.string('$Source: /cvs/CMSSW/CMSSW/Configuration/GenProduction/python/PYTHIA6_Upsilon3S_tuneD6T_7TeV_cff.py,v $'),
         annotation = cms.untracked.string('Summer09: Pythia6 generation of Upsilon(3S), 7TeV, D6T tune')
 )
 
-from Configuration.Generator.PythiaUEZ2Settings_cfi import *
+from Configuration.Generator.PythiaUESettings_cfi import *
 
 generator = cms.EDFilter("Pythia6GeneratorFilter",
     pythiaPylistVerbosity = cms.untracked.int32(0),
@@ -86,3 +86,6 @@ mumugenfilter = cms.EDFilter("MCParticlePairFilter",
 )
 
 ProductionFilterSequence = cms.Sequence(generator*oniafilter*mumugenfilter)
+
+
+
