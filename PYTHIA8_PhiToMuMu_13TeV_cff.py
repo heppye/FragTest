@@ -11,10 +11,13 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
     PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
         pythia8CUEP8M1SettingsBlock,
-        pythiaPhi = cms.vstring(
-         'HardQCD:all = on',
-         '333:onMode = off',
-         '333:onIfMatch 13 13'),
+        
+        processPhi = cms.vstring(
+            'SoftQCD:nonDiffractive = on',
+            'SoftQCD:singleDiffractive = on',
+            'SoftQCD:doubleDiffractive = on',
+            '333:onMode = off',
+            '333:onIfMatch 13 13'),
         parameterSets = cms.vstring('pythia8CommonSettings',
                                     'pythia8CUEP8M1Settings',
                                     'pythiaPhi')
