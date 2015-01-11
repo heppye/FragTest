@@ -11,8 +11,7 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
     PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
         pythia8CUEP8M1SettingsBlock,
-        
-        processPhi = cms.vstring(
+        pythiaPhi = cms.vstring(
             'SoftQCD:nonDiffractive = on',
             'SoftQCD:singleDiffractive = on',
             'SoftQCD:doubleDiffractive = on',
