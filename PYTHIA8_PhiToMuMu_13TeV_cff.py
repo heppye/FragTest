@@ -28,7 +28,7 @@ phifilter = cms.EDFilter("PythiaFilter",
 Status = cms.untracked.int32(2),
 MaxEta = cms.untracked.double(1000.0),
 MinEta = cms.untracked.double(-1000.0),
-MinPt = cms.untracked.double(6.5),
+MinPt = cms.untracked.double(-1.0), 
 ParticleID = cms.untracked.int32(333)
 )
 
