@@ -11,10 +11,10 @@ generator = cms.EDProducer("Pythia6PartonPtGun",
         PartonID = cms.int32(5),
         MinPhi = cms.double(-3.14159265359),
         MaxPhi = cms.double(3.14159265359),
-        MinPt = cms.double(200.0),
+        MinPt = cms.double(20.0),
         MaxPt = cms.double(2000.0001),
-        MinEta = cms.double(-2.5),
-        MaxEta = cms.double(2.5)
+        MinEta = cms.double(-3.0),
+        MaxEta = cms.double(3.0)
     ),
     PythiaParameters = cms.PSet(
         pythiaJets = cms.vstring(),
