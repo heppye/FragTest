@@ -17,8 +17,8 @@ generator = cms.EDFilter(
         MaxPhi = cms.double(3.14159265359),
         MinPt = cms.double(0.0),
         MaxPt = cms.double(2000.0),
-        MinEta = cms.double(-10.0),
-        MaxEta = cms.double(10.0),
+        MinEta = cms.double(-4.0),
+        MaxEta = cms.double(4.0),
         ),
     Verbosity = cms.untracked.int32(0), ## set to 1 (or greater)  for printouts
     psethack = cms.string('b pt 0-2000'),
