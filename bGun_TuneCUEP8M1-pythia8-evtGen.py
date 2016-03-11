@@ -3,19 +3,23 @@ from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
 from GeneratorInterface.EvtGenInterface.EvtGenSetting_cff import *
 
+generator = cms.EDFilter(
+    "Pythia8PtGun",
 
-generator = cms.EDProducer("FlatRandomPtGunProducer",
-    pythiaPylistVerbosity = cms.untracked.int32(10),
-    maxEventsToPrint = cms.untracked.int32(10),
+    maxEventsToPrint = cms.untracked.int32(1),
+    pythiaPylistVerbosity = cms.untracked.int32(1),
+    pythiaHepMCVerbosity = cms.untracked.bool(True),
+
     PGunParameters = cms.PSet(
-        MaxPt = cms.double(2000.0),
-        MinPt = cms.double(0.0),
-        PartID = cms.vint32(5),
-        MaxEta = cms.double(10.0),
+        ParticleID = cms.vint32(5),
+        AddAntiParticle = cms.bool(True),
+        MinPhi = cms.double(-3.14159265359),
         MaxPhi = cms.double(3.14159265359),
-        MinEta = cms.double(-10.0),
-        MinPhi = cms.double(-3.14159265359) ## in radians
-    ),
+        MinPt = cms.double(100.0),
+        MaxPt = cms.double(200.0),
+        MinEta = cms.double(0.0),
+        MaxEta = cms.double(2.4)
+        ),
     Verbosity = cms.untracked.int32(0), ## set to 1 (or greater)  for printouts
     psethack = cms.string('single b pt 0-2000'),
     AddAntiParticle = cms.bool(False),
